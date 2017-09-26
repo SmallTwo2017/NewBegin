@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/angular.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div id="" ng-app="myApp" ng-controller="costCtrl">
+			数量:<input type="text" ng-model="quantity" /> <br />
+			价格:<input type="text" ng-model="price" /><br />
+			<p>数额：{{(quantity*price) }}</p>
+		</div>
+		<script type="text/javascript">
+			var app = angular.module('myApp', []);
+			app.controller('costCtrl', function($scope) {
+				$scope.quantity = 4;
+				$scope.price = 9.8;
+			})
+		</script>
+	</body>
+
+</html>
